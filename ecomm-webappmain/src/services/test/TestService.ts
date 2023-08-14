@@ -6,7 +6,7 @@ export class TestService {
   constructor() {
     if (TestService.instance > 0) {
       console.log("invalid instace");
-      //throw new Error();
+      throw new Error("Invalid Instance");
     }
     TestService.instance = 1;
   }
