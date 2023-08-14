@@ -1,4 +1,5 @@
 import React from "react"
+import RootLevelErrorBoundary from "../../boundary/Error/RootLevelErrorBoundary"
 import Test from "./Test"
 
 export default {
@@ -6,4 +7,4 @@ export default {
     component: Test
 }
 
-export const Testing = () => <Test/>
+export const Testing = () => <RootLevelErrorBoundary> <Test/> </RootLevelErrorBoundary>

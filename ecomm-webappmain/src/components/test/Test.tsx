@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { ITest } from "../../common/interface/test/ITest";
+import { ITest } from "../../common/interface/Test/ITest";
 import { testStore } from "../../store/Test/TestStore";
+import {useErrorBoundary } from "react-error-boundary";
 
 const Test = () => {
   const [test, setTestData] = useState([] as ITest[]);
+  const { showBoundary } = useErrorBoundary ();
   useEffect(() => {
     getTestData();
   }, []);
 
   async function getTestData() {
-    testStore.baseUrl = "http://localhost:6007";
+    testStore.baseUrl = "http://localhost:6006";
     const data: ITest[] = await testStore.getTestData();
     setTestData(data);
+    showBoundary('fsdhfks');
   }
 
   return (
