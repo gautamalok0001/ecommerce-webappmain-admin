@@ -2,7 +2,6 @@ import { rest } from 'msw'
 
 export const handlers = [
   rest.get('/test', (req, res, ctx) => {
-    // ...and respond with this mocked response.
     return res(ctx.json([{
         "id": 1,
         "first_name": "Jeanette",

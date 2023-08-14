@@ -1,5 +1,5 @@
-import { IStore } from "../../common/interface/IStore";
-import { TestService } from "../../services/test/TestService";
+import { IStore } from "../../common/Interface/IStore";
+import { TestService } from "../../services/Test/TestService";
 
 class TestStore implements IStore {
   baseUrl: string;

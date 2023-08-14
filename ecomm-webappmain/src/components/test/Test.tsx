@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ITest } from "../../common/interface/Test/ITest";
+import { ITest } from "../../common/Interface/Test/ITest";
 import { testStore } from "../../store/Test/TestStore";
 import {useErrorBoundary } from "react-error-boundary";
 
