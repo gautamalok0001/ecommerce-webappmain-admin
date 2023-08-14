@@ -1,4 +1,4 @@
-import type { Preview } from "@storybook/react";
+import type { Preview} from "@storybook/react";
 
 const preview: Preview = {
   parameters: {
@@ -11,5 +11,11 @@ const preview: Preview = {
     },
   },
 };
+
+if (process.env.NODE_ENV === 'development') {
+  debugger
+  const { worker } = await import('../src/mocks/browser')
+  worker.start()
+}
 
 export default preview;
