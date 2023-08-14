@@ -13,7 +13,6 @@ const preview: Preview = {
 };
 
 if (process.env.NODE_ENV === 'development') {
-  debugger
   const { worker } = await import('../src/mocks/browser')
   worker.start()
 }
