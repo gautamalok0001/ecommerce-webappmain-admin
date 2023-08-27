@@ -1,13 +1,12 @@
-import React from 'react'
-import MainRoute from './route/route'
-
+import React from "react";
+import MainRoute from "./routes/MainRoute";
 
 function App() {
-  return (
-    <>
-    <MainRoute />
-    </>
-  )
+   return (
+      <>
+         <MainRoute />
+      </>
+   );
 }
 
-export default App
+export default App;
